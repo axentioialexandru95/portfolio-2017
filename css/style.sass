@@ -1,0 +1,268 @@
+@import "bourbon"
+@import "normalize"
+@import "colors"
+
+
+// Responsive Sizes 
+$phone: 480px
+$tablet: 768px
+$smaller-desktop: 992
+$desktop: 1200px
+
+//Fonts
+$crungy-font: 'Lakki Reddy', cursive;
+
+
+// Basic
+
+nav li a 
+	background-color: none
+
+a 
+ text-decoration: none !important
+
+h1
+	font-family: $crungy-font !important
+
+h2
+	font-family: serif !important
+
+body
+	overflow-x: hidden
+	height: 2000px
+.container
+	position: relative
+
+
+
+// Navigation Bar
+.navbar
+	transition: all 0.5s ease-in-out
+	font-size: 1.6rem
+	li
+		&:hover,&:focus
+			transform: scale(1.05)
+			background-color: rgba(black, 0.1) !important
+			border-bottom: 2px solid $medium-blue
+
+		a 
+			margin-top: 5px
+			color: white
+			&:hover
+				background-color: rgba(black, 0.1) !important
+
+
+	.navbar-brand
+		font-size: 2.3rem
+		font-family: $crungy-font
+		margin-left: 50px
+		margin-top: 10px
+
+	.icon-bar
+		background-color: white
+
+	.navbar-right
+		margin-right: 40px
+
+		
+.navbar-expand
+	font-size: 1.6rem
+	transition: all 0.2s ease-in-out
+	background-color: white
+	li
+		a
+			color: black
+
+
+// Header Image
+
+.header-image
+	height: 70vh
+	background:
+		image: url(../images/header-image.jpg)
+		size: cover
+		position: bottom
+		attachment: fixed
+
+	.overlay
+		position: absolute
+		height: 70vh
+		width: 100vw
+		background-color: rgba(black, 0.8)
+
+	.text-overlay
+		color: white
+		position: relative
+		text-align: center 
+		margin: 20vh auto auto 0
+		h1
+			font-size: 3.5rem
+			font-family: $crungy-font
+
+		h3
+			font-size: 2.5rem
+			margin-bottom: 20px
+			font-family: serif
+		hr#small
+			margin-left: 45vw
+			margin-right: 45vw
+	#btn-team
+		font-size: 2.5rem
+		font-family: serif
+		transition: all 0.5s ease-in-out
+		border-radius: 0%
+		background-color: rgba($blue, 0.3)
+
+		&:hover
+			background-color: rgba($blue, 0.8)
+
+	#btn-register
+		font-size: 2.5rem
+		font-family: serif
+		transition: all 0.5s ease-in-out
+		margin-left: 20px
+		border-radius: 0%
+		background-color: rgba(darkgreen, 0.3)
+
+		&:hover
+			background-color: rgba(darkgreen, 1)
+
+// Ce obtin de la acest curs?
+.plans
+	.about-image
+		height: 300px
+		width: 400px
+		margin-top: 30px
+		border-radius: 50%
+		box-shadow: 5px 2px 20px rgba($blue, 0.3)
+		@media screen and (max-width: $phone)
+			height: 200px 
+			width: 300px
+	.fa
+		margin-top: 30px
+		color: $medium-blue
+		font-size: 4.3rem
+	h2
+		font-size: 2.6rem
+
+	p 
+		font-size: 1.6rem
+		font-family: serif
+
+// Echipa
+
+.pentru-cine
+	position: relative
+	margin-top: 30px
+	height: 400px
+	background:
+		image: url(../images/two-kids.jpg)
+		attachment: fixed
+		size: cover
+
+	.overlay
+		height: 100%
+		width: 100%
+		background-color: rgba(black, 0.7)
+		position: absolute
+
+		.text-overlay
+			color: white
+			margin-top: 25vh
+
+			h1
+				font-size: 4rem
+			h4
+				font-size: 2.4rem
+				font-family: serif
+
+.echipa 
+	background:
+		color: rgba(black, 0.9)
+	box-shadow: inset 0px 2px 20px black
+	display: flex
+
+	.card
+		margin-bottom: 30px
+		transition: all 0.5s ease-in-out
+		border-radius: 5%
+		position: relative
+		margin-top: 12vh
+		margin-right: 50px
+		height: 300px
+		width: 330px
+		background-color: white
+
+		&:hover
+			transform: scale(1.05)
+			border: 1px solid blue
+
+		.card-img
+			height: 150px
+			width: 150px
+			border-radius: 50%
+			margin-top: -50px
+			box-shadow: 0px 2px 10px
+
+#echipa-h1
+	color: white
+	padding-top: 20px
+
+// Contact
+.contact	
+	height: 300px
+
+
+// Footer
+.footer
+	text-align: center
+	margin-top: 50px
+	background:
+		color: rgba(black, 0.8)
+		attachment: fixed
+
+	h4
+		margin-top: 30px
+		attachment: fixed
+		color: white
+
+	ul
+		attachment: fixed
+		list-style-type: none
+
+		padding-left: 0px
+
+// Back to top button
+
+.go-top 
+	transition: all 0.5s ease-in-out
+	position: fixed
+	bottom: 2em
+	right: 2em
+	text-decoration: none
+	color: white
+	background-color: rgba(0, 0, 0, 0.2)
+	font-size: 12px
+	padding: 1em
+	display: none
+
+	&:hover
+		background-color: rgba(0, 0, 0, 0.6)
+		transform: scale(1.05)
+
+
+
+@media (max-width: 989px)
+	.navbar-brand 
+		margin-left: 0px !important
+
+@media (max-width: $phone)
+	.navbar-brand
+		position: absolute
+		margin-top: 5px !important
+
+	.overlay
+		.text-overlay
+			margin-top: 17vh
+	#resized
+		font-size: 2.6rem
